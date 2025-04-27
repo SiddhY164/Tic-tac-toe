@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Creme Background Effect */
+body {
+    background: linear-gradient(135deg, #aa8c6e, #e2d1c3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Container Styling */
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    transition: 0.3s;
+}
+
+/* Hover effect for a subtle pop */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Game Title and Status */
+h1 {
+    font-size: 2.5rem;
+    color: #4e342e;
+    margin-bottom: 15px;
+}
+
+.status {
+    font-size: 1.5rem;
+    color: #795548;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Tic-Tac-Toe Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Board Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #f0e5da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4e342e;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    background: #e0c3a9;
+    transform: translateY(-3px);
+}
+
+/* Winning Cell Style */
+.win {
+    background: #81c784 !important;
+    color: #fff;
+    animation: win-blink 1s infinite alternate;
+}
+
+/* Blinking effect for winning cells */
+@keyframes win-blink {
+    0% {
+        background: #81c784;
+    }
+    100% {
+        background: #66bb6a;
+    }
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background: #1a1206;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background: #ff9800;
+    transform: translateY(-4px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
